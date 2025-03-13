@@ -1,9 +1,11 @@
 package com.spring.introduction.repository;
 
 import com.spring.introduction.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository // 4. 스프링 컨테이너에 레포지토리 등록
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
