@@ -4,10 +4,12 @@ import com.spring.introduction.domain.Member;
 import com.spring.introduction.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional // jpa를 통한 데이터 저장, 변경 시 꼭 Transactional 어노테이션
 public class MemberService {
 
     private final MemberRepository memberRepository;
